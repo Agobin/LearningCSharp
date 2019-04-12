@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 //The programs prints the largest element in each row of a multidimensional array
 namespace scenario3_1
 {
@@ -8,6 +7,7 @@ namespace scenario3_1
     {
         static void Main(string[] args)
         {
+            
             int[][] numbers;
 
             numbers = new int[4][];
