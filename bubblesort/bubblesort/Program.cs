@@ -39,16 +39,19 @@ namespace bubblesort
                 numbers[i] = Convert.ToInt32(temp);
             }
 
+            //Display unsorted array
             displayArray(numbers);
+
             numbers = bubblesort(numbers);
 
+            //Display sorted array
             displayArray(numbers);
             return;
         }
 
         public static void displayArray(int[] numbers)
         {
-            //Prints sorted numbers
+            //Prints content of numbers array
             Console.WriteLine();
 
             foreach (int i in numbers)
