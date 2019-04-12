@@ -27,22 +27,23 @@ namespace bubblesort
 
             numbers = new int[n];
 
-            Console.Write("Enter " + n + " numbers to sort: ");
+            Console.WriteLine("Enter " + n + " numbers to sort");
 
             //Reads user input
             for(int i = 0; i < n; i++)
             {
-                int temp;
+                string temp;
 
-                temp = Console.Read(); //Reads number from the input, assumes user enters the correct input
+                temp = Console.ReadLine(); //Reads number from the input, assumes user enters the correct input
 
-                numbers[i] = temp; // int.Parse( //Convert.ToInt32(temp);
+                numbers[i] = Convert.ToInt32(temp);
             }
 
             displayArray(numbers);
             numbers = bubblesort(numbers);
 
-            
+            displayArray(numbers);
+            return;
         }
 
         public static void displayArray(int[] numbers)
@@ -60,10 +61,11 @@ namespace bubblesort
 
         public static int[] bubblesort(int[] numbers)
         {
-            bool swapped = false;
+            bool swapped;
 
             do
-            {    
+            {
+                swapped = false;
 
                 for (int i = 0; i < numbers.Length - 1; i++)
                 {
@@ -76,7 +78,7 @@ namespace bubblesort
                     }
 
                 }
-            } while (swapped == false);
+            } while (swapped == true);
 
             return numbers;
         }
